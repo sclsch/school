@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="work.hdjava.school.mapper.UnivercityRankMapper">
-  <resultMap id="BaseResultMap" type="work.hdjava.school.domain.UnivercityRank">
+<mapper namespace="work.hdjava.school.mapper.UniversityRankMapper">
+  <resultMap id="BaseResultMap" type="work.hdjava.school.domain.UniversityRank">
     <!--@mbg.generated-->
     <!--@Table univercity_rank-->
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -17,7 +17,7 @@
     <!--@mbg.generated-->
     id, `type`, score, majar, `year`, `rank`, school, op_date
   </sql>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="work.hdjava.school.domain.UnivercityRank" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="work.hdjava.school.domain.UniversityRank" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into univercity_rank
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -67,7 +67,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="work.hdjava.school.domain.UnivercityRank">
+  <update id="updateByPrimaryKeySelective" parameterType="work.hdjava.school.domain.UniversityRank">
     <!--@mbg.generated-->
     update univercity_rank
     <set>
@@ -210,7 +210,7 @@
         #{item.opDate,jdbcType=TIMESTAMP})
     </foreach>
   </insert>
-  <insert id="insertOrUpdate" keyColumn="id" keyProperty="id" parameterType="work.hdjava.school.domain.UnivercityRank" useGeneratedKeys="true">
+  <insert id="insertOrUpdate" keyColumn="id" keyProperty="id" parameterType="work.hdjava.school.domain.UniversityRank" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into univercity_rank
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -252,7 +252,7 @@
       op_date = #{opDate,jdbcType=TIMESTAMP},
     </trim>
   </insert>
-  <insert id="insertOrUpdateSelective" keyColumn="id" keyProperty="id" parameterType="work.hdjava.school.domain.UnivercityRank" useGeneratedKeys="true">
+  <insert id="insertOrUpdateSelective" keyColumn="id" keyProperty="id" parameterType="work.hdjava.school.domain.UniversityRank" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into univercity_rank
     <trim prefix="(" suffix=")" suffixOverrides=",">

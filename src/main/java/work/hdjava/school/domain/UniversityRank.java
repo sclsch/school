@@ -1,9 +1,12 @@
 package work.hdjava.school.domain;
 
+import com.alibaba.excel.annotation.ExcelIgnore;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.util.Date;
 
 /**
@@ -11,8 +14,8 @@ import java.util.Date;
  * Date: 2022/10/4 11:19
  * Description:  该文件的描述
  */
-@TableName(value = "univercity_rank")
-public class UnivercityRank {
+@TableName(value = "university_rank")
+public class UniversityRank {
     /**
      * 自增主键
      */
@@ -203,5 +206,56 @@ public class UnivercityRank {
      */
     public void setOpDate(Date opDate) {
         this.opDate = opDate;
+    }
+
+
+    @TableField(exist = false)
+    @ApiModelProperty(value = "当前页码")
+    @ExcelIgnore
+    private Long pageIndex = 1l;
+    @TableField(exist = false)
+    @ApiModelProperty(value = "页大小")
+    @ExcelIgnore
+    private Long pageSize = 10l;
+    @TableField(exist = false)
+    @ApiModelProperty(value = "起始时间")
+    @ExcelIgnore
+    private String startDate;
+    @TableField(exist = false)
+    @ApiModelProperty(value = "结束时间")
+    @ExcelIgnore
+    private String endDate;
+
+
+    public Long getPageIndex() {
+        return pageIndex;
+    }
+
+    public void setPageIndex(Long pageIndex) {
+        this.pageIndex = pageIndex;
+    }
+
+    public Long getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
     }
 }
